@@ -1,0 +1,296 @@
+/* Reset default styles */
+body, h1, h2, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header styles */
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px 0;
+}
+
+header .container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Section content styles */
+.content {
+    padding: 20px;
+    width: 80%;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content h2 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.content p {
+    font-size: 1rem;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+nav ul li a.active {
+    border-bottom: 2px solid white;
+    padding-bottom: 4px;
+}
+/* Responsiveness for smaller screens */
+@media (max-width: 1024px) {
+    header .container {
+        text-align: left;
+    }
+
+    header nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 10px 0;
+    }
+
+    header nav ul li {
+        margin-bottom: 10px;
+    }
+
+    .content {
+        width: 90%;
+    }
+}
+
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 0rem;
+    }
+
+    .content h2 {
+        font-size: 0rem;
+    }
+
+    .content p {
+        font-size: 0rem;
+    }
+}
+.profile-img {
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    margin: 2px 0;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon styles */
+nav ul li a i {
+    margin-right: 2px;
+    color: white;
+}.copyright {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.7); /* Transparansi */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Memastikan di atas elemen lain */
+}
+
+.copyright:hover {
+    background-color: rgba(0, 0, 0, 0.9); /* Efek hover */
+}.copyright {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}/* Login button in top-right corner */
+.login {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+}
+
+.login a {
+    text-decoration: none;
+    background-color: #007bff;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.login a:hover {
+    background-color: #0056b3;
+}
+
+/* Popup login form styles */
+.login-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1100;
+    display: none; /* Hidden by default */
+}
+
+.login-form.hidden {
+    display: none;
+}
+
+.login-form .form-container h2 {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.login-form .form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form .form-container label {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.login-form .form-container input {
+    margin-bottom: 15px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.login-form .form-container button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.login-form .form-container button:hover {
+    background-color: #0056b3;
+}
+
+.close-btn {
+    margin-top: 10px;
+    background-color: #f44336;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.close-btn:hover {
+    background-color: #d32f2f;
+}
+/* Light Mode */
+:root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --button-background: #4CAF50;
+    --button-text-color: white;
+}
+
+body.light-mode {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+button.light-mode {
+    background-color: var(--button-background);
+    color: var(--button-text-color);
+}
+
+/* Dark Mode */
+:root {
+    --background-color: #333333;
+    --text-color: #f4f4f4;
+    --button-background: #555555;
+    --button-text-color: white;
+}
+
+body.dark-mode {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+button.dark-mode {
+    background-color: var(--button-background);
+    color: var(--button-text-color);
+}
